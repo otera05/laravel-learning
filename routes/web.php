@@ -17,12 +17,12 @@ use App\Http\Controllers\ArticlesController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/', 'WelcomeController@index');
-Route::get('/contact', 'WelcomeController@contact');
-Route::get('/about', 'PagesController@about');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+// Route::get('/', 'WelcomeController@index');
+Route::get('/about', 'PagesController@about')->name('about');
+Route::get('/contact', 'WelcomeController@contact')->name('contact');
 
 // Route::get('/home', function () {
 //     return view('home');
