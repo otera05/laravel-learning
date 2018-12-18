@@ -67,4 +67,15 @@ class ArticlesController extends Controller
 
         return redirect(url('articles', [$article->id]));
     }
+
+    /**
+     * 記事の削除
+     */
+    public function destroy($id) {
+        $article = Article::findOrFail($id);
+
+        $article->delete();
+
+        return redirect('articles');
+    }
 }
