@@ -15,7 +15,7 @@
             </ul>
         </div>
     @endif
-    {!! Form::open(['url' => 'articles']) !!}
+    {!! Form::open(['route' => 'articles.create']) !!}
         @include('articles.form', ['published_at' => date('Y-m-d'), 'submitButton' => 'Add Article'])
     {!! Form::close() !!}
 @endsection

@@ -65,7 +65,7 @@ class ArticlesController extends Controller
 
         $article->update($request->validated());
 
-        return redirect(url('articles', [$article->id]))->with('message', '記事を更新しました。');
+        return redirect(route('articles.show', ['id' => $article->id]))->with('message', '記事を更新しました。');
     }
 
     /**
